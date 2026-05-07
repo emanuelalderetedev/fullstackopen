@@ -1,14 +1,16 @@
+import Part from "./Part"
+
 const Content = (props) => {
-    const map = props.data.map((item) => {
+    const items = props.data.map((item) => {
         return (
-            <p key={item.name}>{item.name} {item.exercises}</p>
+            <Part key={item.name} name={item.name} exercises={item.exercises} />
         )
     }
     )
 
     return (
         <div>
-            {map}
+            {items}
         </div>
     )
 }
